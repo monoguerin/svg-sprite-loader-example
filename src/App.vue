@@ -1,13 +1,18 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <twitter-icon />
     <router-view/>
   </div>
 </template>
 
 <script>
+import TwitterIcon from './assets/sprite.svg?twitter-icon'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    TwitterIcon
+  }
 }
 </script>
 
@@ -19,5 +24,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+svg {
+  max-width: 200px;
 }
 </style>
